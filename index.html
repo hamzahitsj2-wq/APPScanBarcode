@@ -81,6 +81,21 @@
             // biarkan kosong, agar pemindaian tetap berjalan
         }
 
+        saveScanBtn.addEventListener('click', () => {
+            const note = itemNoteInput.value.trim();
+            const qty = parseInt(itemQtyInput.value, 10) || 1;
+            const params = new URLSearchParams({
+                sku: lastScannedSku,
+                note,
+                qty: String(qty)
+            });
+
+            localStorage.setItem('last_scanned_sku', lastScannedSku);
+            localStorage.setItem('last_scanned_note', note);
+            localStorage.setItem('last_scanned_qty', String(qty));
+            window.location.href = '../index.html?' + params.toString();
+        });
+
         async function startScanner() {
             if (isScanning) return;
 
@@ -132,21 +147,6 @@
                 startBtn.textContent = 'Mulai Kamera';
             }
         }
-
-        saveScanBtn.addEventListener('click', () => {
-            const note = itemNoteInput.value.trim();
-            const qty = parseInt(itemQtyInput.value, 10) || 1;
-            const params = new URLSearchParams({
-                sku: lastScannedSku,
-                note,
-                qty: String(qty)
-            });
-
-            localStorage.setItem('last_scanned_sku', lastScannedSku);
-            localStorage.setItem('last_scanned_note', note);
-            localStorage.setItem('last_scanned_qty', String(qty));
-            window.location.href = '../index.html?' + params.toString();
-        });
 
         startBtn.addEventListener('click', () => {
             startScanner();

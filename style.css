@@ -1,6 +1,6 @@
 /* Scan Barcode App Styles */
 :root {
-    color-scheme: dark;
+    color-scheme: light;
 }
 
 * {
@@ -10,8 +10,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #020617 0%, #111827 100%);
-    color: #f8fafc;
+    background: #f7f7f7;
+    color: #111111;
 }
 
 .page-shell {
@@ -24,11 +24,11 @@ body {
 
 .scan-card {
     width: min(100%, 560px);
-    background: rgba(15, 23, 42, 0.95);
-    border: 1px solid rgba(56, 189, 248, 0.25);
+    background: #ffffff;
+    border: 1px solid #d6d6d6;
     border-radius: 24px;
-    padding: 24px;
-    box-shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
 .card-header {
@@ -38,44 +38,47 @@ body {
 
 .eyebrow {
     margin: 0 0 6px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #38bdf8;
+    color: #4b5563;
 }
 
 h1 {
-    margin: 0 0 8px;
-    font-size: 1.6rem;
+    margin: 0 0 10px;
+    font-size: 1.75rem;
+    color: #111827;
 }
 
 .status-text {
     margin: 0;
-    color: #cbd5e1;
+    color: #6b7280;
     font-size: 0.95rem;
 }
 
 button {
     display: block;
     width: 100%;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
-    color: #082f49;
+    padding: 14px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #111827;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
 button:hover {
     transform: translateY(-1px);
+    background: #f3f4f6;
+    border-color: #cbd5e1;
 }
 
 button:disabled {
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: wait;
     transform: none;
 }
@@ -84,10 +87,10 @@ button:disabled {
     width: 100%;
     min-height: 320px;
     margin: 18px 0 0;
-    background: #000;
+    background: #e5e7eb;
     border-radius: 18px;
     overflow: hidden;
-    border: 2px solid rgba(56, 189, 248, 0.3);
+    border: 1px solid #d1d5db;
 }
 
 .reader-frame video {
@@ -102,18 +105,18 @@ button:disabled {
     margin-top: 16px;
     padding: 14px;
     border-radius: 14px;
-    background: rgba(2, 6, 23, 0.9);
-    border: 1px solid rgba(56, 189, 248, 0.24);
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
 }
 
 .result-box h4 {
     margin: 0 0 8px;
-    color: #f8fafc;
+    color: #111827;
 }
 
 #result {
     margin: 0;
-    color: #38bdf8;
+    color: #111827;
     font-weight: 700;
     word-break: break-all;
 }
@@ -123,13 +126,13 @@ button:disabled {
     margin-top: 16px;
     padding: 16px;
     border-radius: 16px;
-    background: rgba(2, 6, 23, 0.9);
-    border: 1px solid rgba(56, 189, 248, 0.24);
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
 }
 
 .helper-text {
     margin: 0 0 10px;
-    color: #94a3b8;
+    color: #4b5563;
     font-size: 0.92rem;
 }
 
@@ -138,19 +141,20 @@ button:disabled {
     flex-direction: column;
     gap: 6px;
     margin-bottom: 10px;
-    color: #e2e8f0;
+    color: #111827;
     font-size: 0.95rem;
 }
 
 .detail-field input {
-    padding: 10px 12px;
+    padding: 12px 14px;
     border-radius: 12px;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-    background: #020617;
-    color: #f8fafc;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #111827;
 }
 
 .detail-field input:focus {
     outline: none;
-    border-color: #38bdf8;
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 4px rgba(156, 163, 175, 0.12);
 }
